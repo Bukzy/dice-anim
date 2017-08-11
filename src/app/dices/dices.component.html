@@ -1,0 +1,53 @@
+
+<div
+  *ngIf = "nbDboardservice.score > 0"
+  class="container"
+  >
+<table class="table">
+  <thead>
+    <tr>
+      <!-- <th>Type de dés</th> -->
+      <th>Image</th>
+      <th>Résultat</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      *ngFor="let data of nbDboardservice.dataResult"
+      (click) = "nbDboardservice.selectDice(data)"
+      >
+        <!-- <td [class.selected]="data.selected == true">{{data.type}}</td> -->
+        <td [ngClass] = "{selected: data.selected}">
+          <app-d4
+            *ngIf = "data.type == 'd4'"
+            [resultD4]="data.result"
+            [spinningD4] ="data.spinning"
+            >
+          </app-d4>
+        </td>
+        <td *ngIf= "data.spinning == false" [class.selected]="data.selected == true">{{data.result}}</td>
+    </tr>
+  </tbody>
+</table>
+<h2 *ngIf= "!nbDboardservice.animationD">Résultat: {{nbDboardservice.score}}</h2>
+<!-- les bouton sont déplacés dans board compenant -->
+<!-- <button
+  class="btn btn-primary"
+  (click)="nbDboardservice.rollDices()"
+  [disabled] = "nbDboardservice.buttonState"
+  >
+    Lancer les dés!
+</button>
+<button
+  class="btn btn-primary"
+  (click) = "nbDboardservice.reRoll()"
+  >
+    Re-Lancer les dés selectionnés!
+</button>
+<button
+  class="btn btn-primary"
+  (click)="nbDboardservice.dataReset()"
+  [disabled]="!nbDboardservice.buttonState"
+  >
+    Reset
+</button> -->

@@ -1,0 +1,26 @@
+
+<div class="dice-component clearfix">
+  <div class="dice-image {{ type }}"></div>
+  <div class="col-sm-offset-1 col-sm-3">
+    <button
+    *ngIf = "selectedDice == type"
+    class="btn btn-primary btn-sm"
+    [disabled]="nbDboardservice.removeDicebuttonState"
+    >
+      <span class="glyphicon glyphicon-minus" (click)="removeDice()"></span>
+    </button>
+  </div>
+  <div class="col-sm-3">
+    <input  [(ngModel)]="nbDboardservice.nbDboard[type]" name ="diceQuantity">
+  </div>
+  <div class="col-sm-4">
+    <button
+    *ngIf = "selectedDice == type"
+    class="btn btn-primary btn-sm pull-left"
+    (click)="addDice()"
+    [disabled]="nbDboardservice.addDicebuttonState"
+    >
+      <span class="glyphicon glyphicon-plus"></span>
+    </button>
+  </div>
+</div>

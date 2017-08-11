@@ -1,0 +1,58 @@
+.dice-selector{
+  border:1px solid #e5e5e5;
+  border-radius: 20px;
+  padding: 10px;
+  margin:1%
+}
+.board{
+  border:1px solid #e5e5e5;
+  border-radius: 20px;
+  padding: 10px;
+  height: 100px;
+  margin:1%
+}
+.selected{background-color: lightblue}
+/*Dice Class: inclue également dans dice-component*/
+  .dice-image{
+    height:100px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+   }
+   /*Type d4 :*/
+      .d4{
+        background-image: url("/assets/images/d4.jpg");
+      }
+    /*face*/
+      .d4-1{
+        background-image: url("/assets/images/d4-1.jpg");
+      }
+      .d4-2{
+        background-image: url("/assets/images/d4-2.jpg");
+      }
+      .d4-3{
+        background-image: url("/assets/images/d4-3.jpg");
+      }
+      .d4-4{
+        background-image: url("/assets/images/d4-4.jpg");
+      }
+
+
+  .d6{
+    background-image: url("/assets/images/d6.jpg");
+  }
+  .d8{
+    background-image: url("/assets/images/d8.jpg");
+  }
+
+  .d10{
+    background-image: url("/assets/images/d10.jpg");
+  }
+  .d12{
+    background-image: url("/assets/images/d12.jpg");
+  }
+
+  .d20{
+    background-image: url("/assets/images/d20.jpg");
+  }

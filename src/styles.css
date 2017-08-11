@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+h1{
+  text-align: center;
+}
+/*vient de board component*/
+.dice-selector{
+  border:1px solid #e5e5e5;
+  border-radius: 20px;
+  padding: 10px;
+  margin:1%
+}
+.board{
+  border:1px solid #e5e5e5;
+  border-radius: 20px;
+  padding: 10px;
+  height: 100px;
+  margin:1%
+}
+.selected{background-color: lightblue}
